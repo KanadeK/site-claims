@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "site-claims"
+version = "0.1.0"
+description = "Explain shared installed Python files, RECORD byte matches and hypothetical uninstall risks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "KanadeK"}]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+]
+
+[project.scripts]
+site-claims = "site_claims.cli:main"
+
+[project.urls]
+Repository = "https://github.com/KanadeK/site-claims"
+Issues = "https://github.com/KanadeK/site-claims/issues"
+
+[tool.setuptools.packages.find]
+include = ["site_claims*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]

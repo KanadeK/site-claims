@@ -1,0 +1,13 @@
+name: Bug report
+description: A reproducible defect using synthetic package metadata
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include version, Python/OS, command, expected/actual behavior and minimal synthetic METADATA/RECORD. Remove private names, paths and data.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Report security vulnerabilities through the Security tab, not this public form.
